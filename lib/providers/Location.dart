@@ -8,12 +8,14 @@ class Location{
     final String name;
     final String type;
     final String dimension;
+    final List? residents;
 
     const Location({
       required this.id,
       required this.name,
       required this.type,
-      required this.dimension
+      required this.dimension,
+      this.residents
     });
 
     factory Location.fromJson(Map<String, dynamic> json){
@@ -22,6 +24,7 @@ class Location{
         name: json['name'],
         type: json['type'],
         dimension: json['dimension'],
+        residents: json['residents']
       );
     }
 

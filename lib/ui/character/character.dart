@@ -6,7 +6,7 @@ import 'package:rickmorty/providers/Character.dart';
 import 'package:rickmorty/providers/api.dart';
 
 class CharacterPage extends StatefulWidget {
-  CharacterPage({
+  const CharacterPage({
     Key? key,
     required this.id,
   }) : super(key: key);
@@ -29,7 +29,7 @@ class CharacterState extends State<CharacterPage> {
     return MaterialApp(
         title: 'Liste des personnages de rick & morty',
         theme: ThemeData(
-          primarySwatch: Colors.blue,
+          primarySwatch: Colors.amber,
         ),
         home: Scaffold(
           appBar: AppBar(
@@ -37,6 +37,8 @@ class CharacterState extends State<CharacterPage> {
           ),
           body: Center(
               child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               ElevatedButton(
                 onPressed: () {
